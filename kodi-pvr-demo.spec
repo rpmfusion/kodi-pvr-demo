@@ -1,6 +1,6 @@
-%global commit 57a1c56515d0b01d4eadbf87c1ee464277ea4e00
+%global commit 07cb80570600e3e9d01af67ca89c871ae81dea3a
 %global short_commit %(c=%{commit}; echo ${c:0:7})
-%global commit_date 20170407
+%global commit_date 20170704
 
 %global kodi_addon pvr.demo
 %global kodi_version 17.0
@@ -9,7 +9,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        2.4.6
+Version:        2.4.8
 Release:        1%{?dist}
 Summary:        Demo PVR for Kodi
 
@@ -55,6 +55,9 @@ cp -p %{SOURCE1} .
 
 
 %changelog
+* Mon Oct 02 2017 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:2.4.8-1
+- Update to 2.4.8
+
 * Sat Apr 29 2017 Mohamed El Morabity <melmorabity@fedorapeople.org> - 1:2.4.6-1
 - Update to latest stable release for Kodi 17
 
