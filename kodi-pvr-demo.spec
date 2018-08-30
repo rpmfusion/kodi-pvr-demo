@@ -1,6 +1,6 @@
-%global commit 8f620539bfa4a52f7799d9496ad200a23f0a31fc
+%global commit cc1dc5db3080bdc23052ad72519153e4fd758261
 %global shortcommit %(c=%{commit}; echo ${c:0:7})
-%global commitdate 20180205
+%global commitdate 20180620
 
 %global kodi_addon pvr.demo
 %global kodi_version 18.0
@@ -9,8 +9,8 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        3.5.2
-Release:        2%{?dist}
+Version:        3.6.1
+Release:        1%{?dist}
 Summary:        Demo PVR for Kodi
 
 License:        GPLv2+
@@ -23,7 +23,7 @@ BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  kodi-platform-devel >= %{kodi_version}
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 %{summary}.
@@ -49,6 +49,10 @@ ExclusiveArch:  i686 x86_64
 
 
 %changelog
+* Thu Aug 30 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:3.6.1-1
+- Update to 3.6.1
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1:3.5.2-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
