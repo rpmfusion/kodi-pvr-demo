@@ -17,6 +17,7 @@ Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{versi
 BuildRequires:  cmake3
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
+BuildRequires:  pkgconfig(tinyxml)
 Requires:       kodi >= %{kodi_version}
 ExcludeArch:    %{power64} ppc64le
 
