@@ -6,7 +6,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # Use Epoch to manage upgrades from older upstream
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
-Version:        7.0.0
+Version:        7.1.0
 Release:        1%{?dist}
 Summary:        Demo PVR for Kodi
 
@@ -46,7 +46,10 @@ ExcludeArch:    %{power64} ppc64le
 
 
 %changelog
-* Mon Nov 16 21:54:38 CET 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:7.0.0-1
+* Fri Jan 29 2021 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:7.1.0-1
+- Update to 7.1.0
+
+* Mon Nov 16 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:7.0.0-1
 - Update to 7.0.0
 
 * Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1:6.0.1-1
