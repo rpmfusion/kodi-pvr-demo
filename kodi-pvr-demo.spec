@@ -7,7 +7,7 @@ Name:           kodi-%(tr "." "-" <<<%{kodi_addon})
 # (https://github.com/opdenkamp/xbmc-pvr-addons/)
 Epoch:          1
 Version:        20.5.0
-Release:        7%{?dist}
+Release:        8%{?dist}
 Summary:        Demo PVR for Kodi
 
 License:        GPL-2.0-or-later
@@ -56,6 +56,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Mon Feb 02 2026 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 1:20.5.0-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
+
 * Sun Aug 24 2025 Leigh Scott <leigh123linux@gmail.com> - 1:20.5.0-7
 - Rebuild for new libtinyxml2
 
