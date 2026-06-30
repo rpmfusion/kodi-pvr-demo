@@ -15,7 +15,7 @@ URL:            https://github.com/kodi-pvr/%{kodi_addon}/
 Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}.tar.gz
 Source1:        %{name}.metainfo.xml
 
-BuildRequires:  cmake3
+BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  libappstream-glib
@@ -32,12 +32,12 @@ ExcludeArch:    %{power64}
 
 
 %build
-%cmake3
-%cmake3_build
+%cmake
+%cmake_build
 
 
 %install
-%cmake3_install
+%cmake_install
 
 # Install AppData file
 install -Dpm 0644 %{SOURCE1} %{buildroot}%{_metainfodir}/%{name}.metainfo.xml
